@@ -1,0 +1,372 @@
+@font-face {
+   font-family: "TarnationSans";
+   src: url("../fonts/TarnationSans-Regular.woff2") format("woff2"), url("../fonts/TarnationSans-Regular.woff") format("woff");
+   font-display: swap;
+   font-weight: 400;
+   font-style: normal;
+}
+
+body {
+   font-family: "TarnationSans", sans-serif;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1.2;
+}
+
+[class*="__container"] {
+   max-width: 1240px;
+   margin: 0 auto;
+}
+
+.main {
+   padding: 30px;
+}
+
+.main>*:last-child {
+   margin-bottom: 0px;
+}
+
+.wrapper {
+   overflow: hidden;
+   position: relative;
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.wrapper>main {
+   flex-grow: 1;
+}
+/* ======= header ======= */
+.header {
+   background-color: #77608d;
+   padding: 35px;
+   position: relative;
+}
+
+.header__title {
+   color: white;
+   font-size: 30px;
+   line-height: 1.4;
+   text-align: center;
+   display: inline-block;
+   position: absolute;
+   left: 50%;
+   top: 25%;
+   transform: translate(-50%, 0px);
+}
+
+.header__title:hover {
+   color: red;
+   scale: 1.1;
+   transition: all 1s linear 0s;
+   text-shadow: 3px 3px 5px blue;
+}
+/* ======= main ======= */
+.display-flex__container,
+.inline-flex__container,
+.justify-content__container,
+.justify-content-1__container,
+.justify-content-2__container,
+.justify-content-3__container,
+.justify-content-4__container,
+.justify-content-5__container,
+.align-items__container,
+.align-items-2__container,
+.align-items-3__container,
+.flex-direction__container,
+.flex-direction-2__container,
+.flex-direction-3__container,
+.align-self__container,
+.align-self-1__container,
+.align-self-2__container,
+.flex-grow__container {
+   margin-bottom: 30px;
+   border: 4px solid red;
+   background-color: goldenrod;
+   display: flex;
+   justify-content: flex-start;
+   align-items: stretch;
+   gap: 10px;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+/* !!! Короткий запис - теж робочий */
+[class*="__items"] {
+   color: #fff;
+   display: inline-block;
+   font-size: 24px;
+   font-weight: 700;
+   background-color: #7A956B;
+   padding: 10px;
+   text-align: center;
+   border: 5px solid #77608d;
+}
+
+/* !!! Довший запис */
+/* .display-flex__items,
+.inline-flex__items,
+.justify-content__items,
+.justify-content-1__items,
+.justify-content-2__items,
+.justify-content-3__items,
+.justify-content-4__items,
+.justify-content-5__items,
+.align-items__items,
+.flex-direction__items {
+   color: #fff;
+   display: inline-block;
+   font-size: 24px;
+   font-weight: 700;
+   background-color: #7A956B;
+   padding: 10px;
+   text-align: center;
+   border: 5px solid #77608d;
+} */
+
+.inline-flex__container:hover {
+   display: inline-flex;
+}
+
+.justify-content__container:hover {
+   justify-content: flex-start;
+}
+
+.justify-content-1__container:hover {
+   justify-content: flex-end;
+}
+
+.justify-content-2__container:hover {
+   justify-content: center;
+}
+
+/*!!! Варіант з моєю структурою, але коли флекс контейнер justify-content-3 (flex-direction: column; - інакше нічого працювати не буде + display: flex; P.s. - дякую ментору за допомогу - можливо комусь пригодиться !!!*/
+/* .justify-content-3:hover > .justify-content-3__container {
+   justify-content: space-between;
+   display: flex;
+} */
+.justify-content-3__container:hover {
+   justify-content: space-between;
+}
+
+.justify-content-4__container:hover {
+   justify-content: space-around;
+}
+
+.justify-content-5__container:hover {
+   justify-content: space-evenly;
+}
+
+.align-items__container:hover {
+   /* justify-content: flex-start; */
+   align-items: flex-start;
+   height: 100px;
+}
+
+.align-items-2__container:hover {
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+}
+
+.align-items-3__container:hover {
+   justify-content: flex-end;
+   align-items: flex-end;
+   height: 100px;
+}
+
+.flex-direction__container:hover {
+   flex-direction: row-reverse;
+   /* З height виглядає цікавіше =) */
+   /* height: 150px; */
+}
+
+.flex-direction-2__container:hover {
+   flex-direction: column;
+   height: 100px;
+}
+
+.flex-direction-3__container:hover {
+   flex-direction: column-reverse;
+}
+
+.align-self__container:hover {
+   height: 100px;
+}
+
+.align-self__items:nth-child(2) {
+   align-self: flex-start;
+}
+
+.align-self-1__container:hover {
+   height: 150px;
+}
+
+.align-self-1__items:nth-child(3) {
+   align-self: center;
+}
+
+.align-self-2__container:hover {
+   height: 200px;
+}
+
+.align-self-2__items:nth-child(2) {
+   align-self: flex-start;
+}
+
+.align-self-2__items:nth-child(3) {
+   align-self: center;
+}
+
+.align-self-2__items:nth-child(4) {
+   align-self: flex-end;
+}
+
+.flex-grow__items:nth-child(2) {
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 50px;
+}
+
+.flex-grow__items:nth-child(3) {
+   flex-shrink: 1;
+}
+
+.flex-grow__items:nth-child(4) {
+   flex-grow: 1;
+}
+
+/* ======= Карти ======= */
+.cards {
+   display: flex;
+   margin: 30px -15px;
+}
+
+.cards__column {
+   flex: 0 1 33.333%;
+   padding: 0px 15px;
+}
+
+.cards__item {
+   background-color: rgb(255, 196, 0);
+   padding: 15px;
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+   min-height: 100%;
+}
+
+.item-card {
+   display: flex;
+   flex-direction: column;
+   border-radius: 4px;
+   gap: 10px;
+   align-items: flex-start;
+}
+
+.item-card__image img {
+   max-width: 100%;
+}
+
+.item-card__text {
+   color: rgb(10, 10, 158);
+   flex-grow: 1;
+}
+
+.item-card__button {
+   color: white;
+   background-color: rgb(255, 0, 0);
+   padding: 5px;
+   border-radius: 4px;
+   justify-content: center;
+   align-self: center;
+}
+
+.item-card__button:hover {
+   transition: all 0.5s ease 0s;
+   scale: 1.3;
+}
+/* ======= example ======= */
+
+/* ======= footer ======= */
+.footer {
+   background-color: #7A956B;
+   padding: 35px;
+}
+
+.footer__link {
+   font-family: "TarnationSans", sans-serif;
+   color: white;
+   font-size: 30px;
+   line-height: 1.4;
+   text-align: center;
+}
+
+.footer__link>a:hover {
+   color: blue;
+   display: inline-block;
+   transition: all 1s linear 0s;
+   scale: 1.1;
+   text-shadow: 3px 3px 5px red;
+}
+
+/* ========================= */
+
+.example {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.example__item {}
+
+.item-example {
+   display: flex;
+   gap: 20px;
+   background-color: #666;
+   padding: 15px;
+}
+
+.item-example__image {
+   flex: 0 0 200px;
+}
+
+.item-example__image img {
+   max-width: 100%;
+}
+
+.item-example__text {
+   color: #fff;
+   line-height: 120%;
+}
+/* ========================= */
+.example {
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+
+.card-example:nth-child(odd) {
+   flex-direction: row-reverse;
+}
+
+.card-example {
+   display: flex;
+   gap: 30px;
+   border-radius: 10px;
+   background-color: red;
+   padding: 15px;
+}
+
+.card-example__image {
+   flex: 0 0 200px;
+}
+
+.card-example__image img {
+   max-width: 100%;
+}
+
+.card-example__text {
+   color: yellow;
+   line-height: 1.3;
+}
